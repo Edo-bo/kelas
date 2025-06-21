@@ -1,424 +1,123 @@
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="id">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
   <!-- Judul Halaman Utama -->
-  <title>Komunitas Sharing Kepenulisan - Join Grup WhatsApp</title>
-  
+  <title>Klinik Tugas KSK - Pusat Bantuan & Layanan</title>
+
   <!-- Favicon (Ikon Tab Browser) -->
-  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/fa9c68b7-4b68-4532-d412-547b517fe789.jpg" type="image/x-icon">
-  <link rel="shortcut icon" href="https://storage.googleapis.com/a1aa/image/fa9c68b7-4b68-4532-d412-547b517fe789.jpg" type="image/x-icon">
+  <link rel="icon" href="https://files.catbox.moe/vojizr.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="https://files.catbox.moe/vojizr.jpg" type="image/x-icon">
 
   <!-- Deskripsi SEO -->
-  <meta name="description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!">
-  <meta name="keywords" content="komunitas menulis, belajar menulis, grup whatsapp menulis, kepenulisan, penulis, workshop menulis, kelas menulis gratis">
-  <meta name="author" content="Komunitas Sharing Kepenulisan">
+  <meta name="description" content="Klinik Tugas KSK menyediakan akses mudah untuk mengerjakan tugas, mengunduh kisi-kisi, serta mendapatkan layanan konsultasi dan psikologi.">
+  <meta name="keywords" content="klinik tugas, ksk, bantuan tugas, konsultasi karya, layanan psikologi, quizzory">
+  <meta name="author" content="Klinik Tugas KSK">
 
-  <!-- Open Graph Meta Tags (untuk Facebook, LinkedIn, dll.) -->
-  <meta property="og:title" content="Komunitas Sharing Kepenulisan - Gabung Grup WhatsApp Gratis!"/>
-  <meta property="og:description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!"/>
-  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg"/>
-  <meta property="og:image:alt" content="Sekelompok anak muda sedang belajar menulis bersama dalam suasana yang ceria."/>
-  <meta property="og:url" content="https://kelas.hosti.my.id"/>
-  <meta property="og:site_name" content="Komunitas Sharing Kepenulisan"/>
-  <meta property="og:type" content="website"/>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Klinik Tugas KSK - Pusat Bantuan & Layanan" />
+  <meta property="og:description" content="Akses semua kebutuhan tugas KSK di satu tempat. Mulai dari mengerjakan tugas, download materi, hingga konsultasi." />
+  <meta property="og:image" content="https://files.catbox.moe/lf2z1m.jpg" />
+  <meta property="og:image:alt" content="Poster informasi Klinik Tugas KSK" />
+  <meta property="og:type" content="website" />
   <meta property="og:locale" content="id_ID" />
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Komunitas Sharing Kepenulisan - Gabung Grup WhatsApp Gratis!"/>
-  <meta name="twitter:description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!"/>
-  <meta name="twitter:image" content="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg"/>
 
   <!-- Styling -->
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
-   body {
+    body {
       font-family: 'Poppins', sans-serif;
-      /* Mencegah seleksi teks */
-      user-select: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
     }
-    /* Style untuk modal peringatan */
-    #alert-modal {
-        transition: opacity 0.3s ease-in-out;
+    .btn-gradient {
+      background-image: linear-gradient(to right, #4f46e5, #818cf8);
+    }
+    .btn-gradient:hover {
+      background-image: linear-gradient(to right, #4338ca, #6366f1);
     }
   </style>
- </head>
- <body class="bg-gradient-to-b from-indigo-50 to-white min-h-screen flex flex-col">
-  <header class="bg-indigo-700 text-white shadow-md sticky top-0 z-50">
-   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center space-x-2">
-     <img alt="Logo Komunitas Sharing Kepenulisan, stylized letters KS in white on indigo background" class="rounded-full" height="40" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fa9c68b7-4b68-4532-d412-547b517fe789.jpg" width="40"/>
-     <h1 class="text-lg font-bold tracking-wide">
-      Komunitas Sharing Kepenulisan
-     </h1>
-    </div>
-    <nav class="hidden md:flex space-x-6 font-semibold text-indigo-200 text-sm">
-     <a class="hover:text-white transition" href="#about">
-      Tentang
-     </a>
-     <a class="hover:text-white transition" href="#materi">
-      Materi
-     </a>
-     <a class="hover:text-white transition" href="#benefit">
-      Benefit
-     </a>
-     <a class="hover:text-white transition" href="#join">
-      Join Grup
-     </a>
-    </nav>
-    <button aria-label="Toggle menu" class="md:hidden focus:outline-none focus:ring-2 focus:ring-white" id="menu-btn">
-     <i class="fas fa-bars text-xl">
-     </i>
-    </button>
-   </div>
-   <nav class="md:hidden bg-indigo-600 text-indigo-100 px-4 py-3 space-y-2 hidden text-sm" id="mobile-menu">
-    <a class="block hover:text-white font-semibold" href="#about">
-     Tentang
-    </a>
-    <a class="block hover:text-white font-semibold" href="#materi">
-     Materi
-    </a>
-    <a class="block hover:text-white font-semibold" href="#benefit">
-     Benefit
-    </a>
-    <a class="block hover:text-white font-semibold" href="#join">
-     Join Grup
-    </a>
-   </nav>
-  </header>
-  <main class="flex-grow max-w-3xl mx-auto px-4 py-8">
-   <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center gap-8" id="hero">
-    <!-- ## KONTEN DINAMIS ## Elemen ini akan diisi oleh JavaScript -->
-    <h2 id="dynamic-greeting" class="text-indigo-700 text-2xl font-extrabold leading-tight text-center">
-     <!-- Sapaan akan muncul di sini -->
-    </h2>
-    <p class="text-gray-700 text-base text-center leading-relaxed max-w-md">
-     Kamu suka menulis? Aku kasih info ya,
-     <span class="font-semibold text-indigo-600">
-      Komunitas Sharing Kepenulisan
-     </span>
-     lagi buka kelas khusus yakni
-     <span class="font-bold text-indigo-800">
-      ORM Generasi 4
-     </span>
-     buat kamu, cocok banget nih!
-    </p>
-    <p class="text-indigo-700 font-extrabold text-xl">
-     GRATIS TANPA BIAYA!!!
-    </p>
-    <a class="inline-block bg-indigo-700 hover:bg-indigo-800 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition text-sm" href="#join">
-     Gabung Sekarang
-    </a>
-    <img alt="Sekelompok anak muda sedang menulis bersama di sebuah workshop kreatif dengan suasana ceria dan penuh inspirasi" class="rounded-xl shadow-lg w-full max-w-xs" height="220" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg" width="300"/>
-   </section>
-   <!-- Bagian konten lainnya tetap sama -->
-   <section class="mt-12 bg-indigo-50 rounded-2xl p-6 shadow-lg" id="about">
-    <h3 class="text-indigo-700 text-xl font-bold mb-4 text-center">
-     Pemateri
-    </h3>
-    <ul class="grid grid-cols-2 gap-4 text-indigo-900 font-semibold text-sm">
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Aditya Rohim, pria muda dengan kacamata dan senyum ramah, latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/eb7e9223-4aec-4153-0c9c-0d696972a53f.jpg" width="48"/>
-      <span>
-       Kak Aditya Rohim
-      </span>
-     </li>
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Arif Aryaguna, pria muda dengan rambut pendek dan ekspresi percaya diri, latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1d91dde2-855a-42c3-4492-af7bf4c77ea5.jpg" width="48"/>
-      <span>
-       Kak Arif Aryaguna
-      </span>
-     </li>
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Ariya Saputra, pria muda dengan senyum hangat dan latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bace52b7-19b5-4a62-43e0-50360d636bfb.jpg" width="48"/>
-      <span>
-       Kak Ariya Saputra
-      </span>
-     </li>
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Fachri Ramdhan Mustari, pria muda dengan ekspresi serius dan latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/99331b8c-5271-4447-ebf1-8295034afb9a.jpg" width="48"/>
-      <span>
-       Kak Fachri Ramdhan Mustari
-      </span>
-     </li>
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Pajri Muhammad Nurdin, pria muda dengan senyum ramah dan latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/00807ee5-7248-4a7c-2d88-90208c23b8a4.jpg" width="48"/>
-      <span>
-       Kak Pajri Muhammad Nurdin
-      </span>
-     </li>
-     <li class="flex items-center space-x-3 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <img alt="Potret Kak Reyhan Arrasuli, wanita muda dengan rambut panjang dan senyum hangat, latar belakang netral" class="rounded-full" height="48" loading="lazy" src="https://storage.googleapis.com/a1aa/image/451d540f-9f0b-4a9d-195c-c39a9b520198.jpg" width="48"/>
-      <span>
-       Kak Reyhan Arrasuli
-      </span>
-     </li>
-    </ul>
-   </section>
-    <section class="mt-12 bg-white rounded-2xl p-6 shadow-lg" id="materi">
-    <h3 class="text-indigo-700 text-xl font-bold mb-4 text-center">
-     Materi Kelas
-    </h3>
-    <ul class="grid grid-cols-1 gap-3 text-indigo-900 font-semibold text-sm max-w-md mx-auto">
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-book-open text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Bahasa Sastra Indonesia
-      </span>
-     </li>
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-brain text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Psikologi Khusus Penulis (Pendalaman Karakter)
-      </span>
-     </li>
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-users text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Sosiologi Khusus Penulis (Interaksi)
-      </span>
-     </li>
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-paint-brush text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Desain Grafis (Sampul Karya dan Layout Artist)
-      </span>
-     </li>
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-clock text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Management Waktu
-      </span>
-     </li>
-     <li class="flex items-center space-x-2 bg-indigo-50 rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-chalkboard-teacher text-indigo-600 text-lg w-6 text-center">
-      </i>
-      <span>
-       Kepemimpinan (Dalam Komunitas Sastra)
-      </span>
-     </li>
-    </ul>
-   </section>
-   <section class="mt-12 bg-indigo-50 rounded-2xl p-6 shadow-lg" id="akses">
-    <h3 class="text-indigo-700 text-xl font-bold mb-4 text-center">
-     Akses Fasilitas
-    </h3>
-    <ul class="grid grid-cols-3 gap-4 text-indigo-900 font-semibold text-xs text-center max-w-xs mx-auto">
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-users text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Ruang Seminar
-      </span>
-     </li>
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-hands-helping text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Layanan Psikologi
-      </span>
-     </li>
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-comments text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Konsultasi Karya
-      </span>
-     </li>
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-mobile-alt text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Klinik Tugas
-      </span>
-     </li>
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-robot text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Bot WA Komunitas
-      </span>
-     </li>
-     <li class="flex flex-col items-center space-y-1 bg-white rounded-lg p-3 shadow hover:shadow-md transition">
-      <i class="fas fa-link text-indigo-600 text-2xl">
-      </i>
-      <span>
-       Link Grup WhatsApp
-      </span>
-     </li>
-    </ul>
-   </section>
-   <section class="mt-12 bg-white rounded-2xl p-6 shadow-lg text-center" id="benefit">
-    <h3 class="text-indigo-700 text-xl font-bold mb-4">
-     Benefit Peserta
-    </h3>
-    <ul class="list-disc list-inside space-y-2 text-indigo-900 font-semibold text-sm max-w-xs mx-auto">
-     <li>
-      Terbit Bersama Analogi
-     </li>
-     <li>
-      E-Sertifikat Peserta
-     </li>
-     <li>
-      E-Sertifikat Kejuaraan
-     </li>
-     <li>
-      E-Rapor
-     </li>
-     <li>
-      Leger Nilai
-     </li>
-    </ul>
-   </section>
-   <section class="mt-12 bg-indigo-700 text-white rounded-2xl p-6 shadow-lg text-center" id="join">
-    <h3 class="text-2xl font-extrabold mb-4">
-     Sudah 30+ Pendaftar
-    </h3>
-    <p class="text-lg font-semibold mb-3">
-     Quota Tersisa
-     <span class="text-yellow-300 text-xl font-extrabold">
-      3
-     </span>
-    </p>
-    <p class="text-base mb-5 italic">
-     Deadline:
-     <span class="font-bold">
-      25 Juni 2025
-     </span>
-    </p>
-    <a aria-label="Join Grup WhatsApp Komunitas Sharing Kepenulisan" class="inline-flex items-center justify-center space-x-2 bg-yellow-400 hover:bg-yellow-300 text-indigo-900 font-bold px-6 py-3 rounded-full shadow-lg transition text-sm" href="https://chat.whatsapp.com/DlsLLkdxpTB4XVDEzdAdOk" rel="noopener noreferrer" target="_blank">
-     <i class="fab fa-whatsapp text-xl">
-     </i>
-     <span>
-      Gabung Grup WhatsApp
-     </span>
-    </a>
-    <p class="mt-6 text-sm font-semibold">
-     Narahubung:
-     <a class="underline hover:text-yellow-300" href="tel:+6285165394231">
-      085165394231 (Admin)
-     </a>
-    </p>
-   </section>
-  </main>
-  <footer class="bg-indigo-900 text-indigo-200 py-4 mt-12 text-center text-xs">
-   © 2024 Komunitas Sharing Kepenulisan. All rights reserved.
-  </footer>
+</head>
 
-  <!-- Modal Peringatan -->
-  <div id="alert-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0">
-      <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm text-center">
-          <div class="mb-4">
-              <i class="fas fa-exclamation-triangle text-yellow-400 text-4xl"></i>
-          </div>
-          <h3 class="text-lg font-bold text-gray-800 mb-2">Aksi Dilarang</h3>
-          <p class="text-gray-600 text-sm">Maaf, menyalin konten tidak diizinkan di halaman ini.</p>
-          <button id="close-modal-btn" class="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg w-full transition">
-              Saya Mengerti
-          </button>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white text-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo Klinik Tugas KSK" class="rounded-full" height="50" width="50" src="https://files.catbox.moe/vojizr.jpg" />
+        <h1 class="text-xl font-bold tracking-wide text-indigo-700">
+          Klinik Tugas KSK
+        </h1>
       </div>
-  </div>
+    </div>
+  </header>
 
-  <script>
-    // --- SCRIPT PERLINDUNGAN KONTEN ---
-    
-    const alertModal = document.getElementById('alert-modal');
-    const closeModalBtn = document.getElementById('close-modal-btn');
-    let modalTimer;
+  <!-- Main Content -->
+  <main class="flex-grow max-w-2xl mx-auto px-4 py-8 w-full">
+    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center gap-6">
 
-    function showModal() {
-        // Mencegah modal muncul berulang kali jika sudah terlihat
-        if (alertModal.classList.contains('hidden')) {
-            alertModal.classList.remove('hidden');
-            setTimeout(() => alertModal.classList.remove('opacity-0'), 10); // Transisi fade-in
-            
-            // Atur timer untuk menutup modal secara otomatis setelah 3 detik
-            clearTimeout(modalTimer); // Hapus timer sebelumnya jika ada
-            modalTimer = setTimeout(hideModal, 3000);
-        }
-    }
+      <!-- Poster -->
+      <img alt="Poster Klinik Tugas KSK" class="rounded-xl shadow-lg w-full max-w-md" src="https://files.catbox.moe/lf2z1m.jpg" 
+           onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Poster+Tidak+Tersedia';" />
 
-    function hideModal() {
-        alertModal.classList.add('opacity-0');
-        setTimeout(() => alertModal.classList.add('hidden'), 300); // Tunggu transisi selesai
-    }
+      <!-- Judul Aksi -->
+      <h2 class="text-2xl font-bold text-gray-800 text-center mt-4">Pusat Akses & Layanan</h2>
+      <p class="text-gray-600 text-center -mt-4 mb-4">Semua yang kamu butuhkan ada di sini!</p>
+      
+      <!-- Container untuk Tombol-tombol -->
+      <div class="w-full max-w-sm space-y-4">
 
-    // Mencegah klik kanan
-    document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-        showModal();
-    });
+        <!-- Tombol Download Kisi-kisi -->
+        <a href="https://drive.google.com/drive/folders/1JzUJM6qIYQAMhEKiRZjX5zAL3l0O7mDy" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105">
+          <i class="fas fa-cloud-download-alt mr-3"></i>
+          <span>Download Kisi-Kisi</span>
+        </a>
 
-    // Mencegah kombinasi tombol keyboard (Ctrl+C, Ctrl+U, dll.)
-    document.addEventListener('keydown', (e) => {
-        // Cek jika Ctrl (atau Cmd di Mac) ditekan bersamaan dengan tombol 'c', 'u', 's', 'i'
-        if (e.ctrlKey || e.metaKey) {
-            switch (e.key.toLowerCase()) {
-                case 'c': // Copy
-                case 'u': // View source
-                case 's': // Save
-                case 'i': // Developer tools
-                    e.preventDefault();
-                    showModal();
-                    break;
-            }
-        }
-    });
+        <!-- Tombol Masuk ke Situs Tugas -->
+        <a href="https://quizzory.in/id/6856143d76c2dc33e6143dc5" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center w-full btn-gradient text-white font-bold px-6 py-4 rounded-lg shadow-xl transition transform hover:scale-105 text-lg">
+           <i class="fas fa-pencil-alt mr-3"></i>
+          <span>KERJAKAN TUGAS</span>
+        </a>
+        
+        <!-- Garis Pemisah -->
+        <div class="border-t border-gray-200 my-6"></div>
 
-    // Event listener untuk tombol tutup modal
-    closeModalBtn.addEventListener('click', hideModal);
+        <!-- Tombol Layanan Tambahan -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Tombol Pusat Bantuan -->
+          <a href="https://wa.me/6285165394231" target="_blank" rel="noopener noreferrer" 
+             class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class="fas fa-question-circle mr-2"></i>
+            <span>Pusat Bantuan</span>
+          </a>
 
+          <!-- Tombol Konsultasi Karya -->
+          <a href="https://wa.me/6285165394230" target="_blank" rel="noopener noreferrer" 
+             class="flex items-center justify-center bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition transform hover:scale-105">
+            <i class="fas fa-lightbulb mr-2"></i>
+            <span>Konsultasi Karya</span>
+          </a>
+        </div>
 
-    // --- SCRIPT FUNGSI LAINNYA ---
-    
-    // Script untuk menu mobile
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+        <!-- Tombol Layanan Psikologi -->
+        <a href="https://chat.whatsapp.com/IYBF59TVuVh0ctBDBzCPn1" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105 mt-4">
+          <i class="fas fa-brain mr-3"></i>
+          <span>Layanan Psikologi</span>
+        </a>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+      </div>
+    </section>
+  </main>
 
-    // Script untuk sapaan dinamis berdasarkan waktu
-    const greetingElement = document.getElementById('dynamic-greeting');
-    if (greetingElement) {
-        const currentHour = new Date().getHours();
-        let greetingText = '';
-        let greetingEmoji = '';
-
-        // Logika untuk menentukan sapaan
-        if (currentHour >= 5 && currentHour < 11) {
-          greetingText = 'Selamat Pagi';
-          greetingEmoji = '☀️';
-        } 
-        else if (currentHour >= 11 && currentHour < 16) {
-          greetingText = 'Selamat Siang';
-          greetingEmoji = '🌤️';
-        } 
-        else if (currentHour >= 16 && currentHour < 19) {
-          greetingText = 'Selamat Sore';
-          greetingEmoji = '🌥️';
-        } 
-        else {
-          greetingText = 'Selamat Malam';
-          greetingEmoji = '🌙';
-        }
-
-        greetingElement.innerHTML = `${greetingText}, anak muda! <span class="inline-block">${greetingEmoji}</span>`;
-    }
-  </script>
- </body>
+  <!-- Footer -->
+  <footer class="bg-white text-gray-600 py-4 mt-8 text-center text-sm">
+    © 2024 Klinik Tugas KSK. All rights reserved.
+  </footer>
+</body>
 </html>
