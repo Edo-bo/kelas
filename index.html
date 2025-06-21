@@ -2,9 +2,36 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Komunitas Sharing Kepenulisan - Join Grup WhatsApp
-  </title>
+  
+  <!-- Judul Halaman Utama -->
+  <title>Komunitas Sharing Kepenulisan - Join Grup WhatsApp</title>
+  
+  <!-- Favicon (Ikon Tab Browser) -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/fa9c68b7-4b68-4532-d412-547b517fe789.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="https://storage.googleapis.com/a1aa/image/fa9c68b7-4b68-4532-d412-547b517fe789.jpg" type="image/x-icon">
+
+  <!-- Deskripsi SEO -->
+  <meta name="description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!">
+  <meta name="keywords" content="komunitas menulis, belajar menulis, grup whatsapp menulis, kepenulisan, penulis, workshop menulis, kelas menulis gratis">
+  <meta name="author" content="Komunitas Sharing Kepenulisan">
+
+  <!-- Open Graph Meta Tags (untuk Facebook, LinkedIn, dll.) -->
+  <meta property="og:title" content="Komunitas Sharing Kepenulisan - Gabung Grup WhatsApp Gratis!"/>
+  <meta property="og:description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!"/>
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg"/>
+  <meta property="og:image:alt" content="Sekelompok anak muda sedang belajar menulis bersama dalam suasana yang ceria."/>
+  <meta property="og:url" content="https://kelas.hosti.my.id"/>
+  <meta property="og:site_name" content="Komunitas Sharing Kepenulisan"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="id_ID" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Komunitas Sharing Kepenulisan - Gabung Grup WhatsApp Gratis!"/>
+  <meta name="twitter:description" content="Suka menulis? Gabung Komunitas Sharing Kepenulisan (ORM Gen 4)! Dapatkan materi eksklusif, e-sertifikat, dan terbitkan karyamu. Kuota terbatas, daftar sekarang gratis!"/>
+  <meta name="twitter:image" content="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg"/>
+
+  <!-- Styling -->
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
@@ -12,6 +39,15 @@
   <style>
    body {
       font-family: 'Poppins', sans-serif;
+      /* Mencegah seleksi teks */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+    /* Style untuk modal peringatan */
+    #alert-modal {
+        transition: opacity 0.3s ease-in-out;
     }
   </style>
  </head>
@@ -60,11 +96,9 @@
   </header>
   <main class="flex-grow max-w-3xl mx-auto px-4 py-8">
    <section class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center gap-8" id="hero">
-    <h2 class="text-indigo-700 text-2xl font-extrabold leading-tight text-center">
-     Halo anak muda
-     <span class="wave inline-block">
-      👋🏻
-     </span>
+    <!-- ## KONTEN DINAMIS ## Elemen ini akan diisi oleh JavaScript -->
+    <h2 id="dynamic-greeting" class="text-indigo-700 text-2xl font-extrabold leading-tight text-center">
+     <!-- Sapaan akan muncul di sini -->
     </h2>
     <p class="text-gray-700 text-base text-center leading-relaxed max-w-md">
      Kamu suka menulis? Aku kasih info ya,
@@ -85,6 +119,7 @@
     </a>
     <img alt="Sekelompok anak muda sedang menulis bersama di sebuah workshop kreatif dengan suasana ceria dan penuh inspirasi" class="rounded-xl shadow-lg w-full max-w-xs" height="220" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1cc81015-3043-4ac5-dd2c-4919a7aebd7d.jpg" width="300"/>
    </section>
+   <!-- Bagian konten lainnya tetap sama -->
    <section class="mt-12 bg-indigo-50 rounded-2xl p-6 shadow-lg" id="about">
     <h3 class="text-indigo-700 text-xl font-bold mb-4 text-center">
      Pemateri
@@ -128,7 +163,7 @@
      </li>
     </ul>
    </section>
-   <section class="mt-12 bg-white rounded-2xl p-6 shadow-lg" id="materi">
+    <section class="mt-12 bg-white rounded-2xl p-6 shadow-lg" id="materi">
     <h3 class="text-indigo-700 text-xl font-bold mb-4 text-center">
      Materi Kelas
     </h3>
@@ -282,24 +317,107 @@
   <footer class="bg-indigo-900 text-indigo-200 py-4 mt-12 text-center text-xs">
    © 2024 Komunitas Sharing Kepenulisan. All rights reserved.
   </footer>
+
+  <!-- Modal Peringatan -->
+  <div id="alert-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0">
+      <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm text-center">
+          <div class="mb-4">
+              <i class="fas fa-exclamation-triangle text-yellow-400 text-4xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Aksi Dilarang</h3>
+          <p class="text-gray-600 text-sm">Maaf, menyalin konten tidak diizinkan di halaman ini.</p>
+          <button id="close-modal-btn" class="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg w-full transition">
+              Saya Mengerti
+          </button>
+      </div>
+  </div>
+
   <script>
-   const menuBtn = document.getElementById('menu-btn');
+    // --- SCRIPT PERLINDUNGAN KONTEN ---
+    
+    const alertModal = document.getElementById('alert-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    let modalTimer;
+
+    function showModal() {
+        // Mencegah modal muncul berulang kali jika sudah terlihat
+        if (alertModal.classList.contains('hidden')) {
+            alertModal.classList.remove('hidden');
+            setTimeout(() => alertModal.classList.remove('opacity-0'), 10); // Transisi fade-in
+            
+            // Atur timer untuk menutup modal secara otomatis setelah 3 detik
+            clearTimeout(modalTimer); // Hapus timer sebelumnya jika ada
+            modalTimer = setTimeout(hideModal, 3000);
+        }
+    }
+
+    function hideModal() {
+        alertModal.classList.add('opacity-0');
+        setTimeout(() => alertModal.classList.add('hidden'), 300); // Tunggu transisi selesai
+    }
+
+    // Mencegah klik kanan
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        showModal();
+    });
+
+    // Mencegah kombinasi tombol keyboard (Ctrl+C, Ctrl+U, dll.)
+    document.addEventListener('keydown', (e) => {
+        // Cek jika Ctrl (atau Cmd di Mac) ditekan bersamaan dengan tombol 'c', 'u', 's', 'i'
+        if (e.ctrlKey || e.metaKey) {
+            switch (e.key.toLowerCase()) {
+                case 'c': // Copy
+                case 'u': // View source
+                case 's': // Save
+                case 'i': // Developer tools
+                    e.preventDefault();
+                    showModal();
+                    break;
+            }
+        }
+    });
+
+    // Event listener untuk tombol tutup modal
+    closeModalBtn.addEventListener('click', hideModal);
+
+
+    // --- SCRIPT FUNGSI LAINNYA ---
+    
+    // Script untuk menu mobile
+    const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Wave emoji animation
-    const wave = document.querySelector('.wave');
-    if (wave) {
-      wave.style.display = 'inline-block';
-      wave.style.transformOrigin = '70% 70%';
-      let angle = 0;
-      setInterval(() => {
-        angle = angle === 0 ? 20 : 0;
-        wave.style.transform = `rotate(${angle}deg)`;
-      }, 600);
+    // Script untuk sapaan dinamis berdasarkan waktu
+    const greetingElement = document.getElementById('dynamic-greeting');
+    if (greetingElement) {
+        const currentHour = new Date().getHours();
+        let greetingText = '';
+        let greetingEmoji = '';
+
+        // Logika untuk menentukan sapaan
+        if (currentHour >= 5 && currentHour < 11) {
+          greetingText = 'Selamat Pagi';
+          greetingEmoji = '☀️';
+        } 
+        else if (currentHour >= 11 && currentHour < 16) {
+          greetingText = 'Selamat Siang';
+          greetingEmoji = '🌤️';
+        } 
+        else if (currentHour >= 16 && currentHour < 19) {
+          greetingText = 'Selamat Sore';
+          greetingEmoji = '🌥️';
+        } 
+        else {
+          greetingText = 'Selamat Malam';
+          greetingEmoji = '🌙';
+        }
+
+        greetingElement.innerHTML = `${greetingText}, anak muda! <span class="inline-block">${greetingEmoji}</span>`;
     }
   </script>
  </body>
